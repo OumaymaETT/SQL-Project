@@ -1,0 +1,7 @@
+-- Wording et coefficient exprimé en pourcentage pour chaque matière
+SELECT wording, coef * 100 AS percentage 
+FROM Matter;
+
+-- Somme des coefficients de toutes les matières
+SELECT SUM(coef) AS total_coefficients 
+FROM Matter;

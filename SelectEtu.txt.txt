@@ -1,0 +1,18 @@
+-- Liste de tous les étudiants
+SELECT * FROM Student;
+
+-- Liste de tous les étudiants, triée par ordre alphabétique inverse (du Z au A)
+SELECT * FROM Student
+ORDER BY name DESC;
+
+-- Nom et prénom des étudiants domiciliés à Lyon
+SELECT name, firstname FROM Student
+WHERE city = 'Lyon';
+
+-- Nom, prénom et ville des étudiants dont la ville contient "LL"
+SELECT name, firstname, city FROM Student
+WHERE city LIKE '%LL%';
+
+-- Prénom des étudiants ayant comme nom Dupont, Durand ou Martin
+SELECT firstname FROM Student
+WHERE name IN ('Dupont', 'Durand', 'Martin');
